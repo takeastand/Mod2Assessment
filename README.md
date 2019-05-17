@@ -1,18 +1,14 @@
 # Mod2Assessment 1:1 
 
-
-## Distinguish between the web and the internet
-  **Verbal Assessment**
-
-## Describe the HTTP request-response cycle
-  **Verbal Assessment**
-
-## Explain the MVC architecture pattern
-  **Verbal Assessment**
+## Verbal Assessment
+1. Distinguish between the web and the internet
+2. Describe the HTTP request-response cycle
+3. Explain the MVC architecture pattern
+ 
 
 ## Create web servers
 #### Assessment
-  Make a server that responds to a request. No routes needed.
+  Make a server that responds to a request. 
   
 ## Create simple web apps using the MVC architecture pattern
 #### Assessment
