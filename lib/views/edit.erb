@@ -1,4 +1,6 @@
 <form method="POST" action="/big_cats/<%= @big_cat.id %>">
+  <input type="hidden" name="_method" value="patch">
+
   <label for="breed">Name: </label>
   <input type="text" name="breed" id="breed" value="<%= @big_cat.breed %>"/>
   <label for="average_age">Life Expectancy: </label>
@@ -8,8 +10,6 @@
   <label for="weight">Weight: </label>
   <input type="number" name="weight" id="weight" value="<%= @big_cat.weight %>"/>
   <input type="submit" value="Edit Big Cat">
-
-  <input type="hidden" name="_method" value="patch">
 </form>
 
 

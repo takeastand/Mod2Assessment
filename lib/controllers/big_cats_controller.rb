@@ -8,19 +8,13 @@ class BigCatsController < Sinatra::Base
     redirect '/big_cats'
   end
 
+  get '/new' do
+    erb :new
+  end
+
   get '/big_cats' do
     @big_cats = BigCat.all
     erb :index
-  end
-
-  get "/big_cats/:id" do
-    @big_cats = BigCat.all.find(params[:id])
-    #binding.pry
-    erb :show
-  end
-
-  get '/new' do
-    erb :new
   end
 
   post '/big_cats' do
@@ -28,13 +22,19 @@ class BigCatsController < Sinatra::Base
       breed: params[:breed],
       average_age: params[:average_age],
       length: params[:length],
-      weight: params[:length]
-    })
+      weight: params[:weight]
+      })
 
-    id = new_cat.id
+      id = new_cat.id
 
-    redirect "/big_cats/{#{id}}"
+      redirect "/big_cats/#{id}"
+    end
+
+  get "/big_cats/:id" do
+    @big_cat = BigCat.find(params[:id])
+    erb :show
   end
+
 
   get "/big_cats/:id/edit" do
     @big_cat = BigCat.find(params[:id])

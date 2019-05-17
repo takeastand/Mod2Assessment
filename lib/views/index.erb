@@ -5,6 +5,7 @@
 <% @big_cats.each do |cat| %>
 <li><%= "#{cat.breed} - #{cat.average_age} - #{cat.length} - #{cat.weight}" %>
   <a href="big_cats/<%= cat.id %>/edit">edit</a>
+  <a href="big_cats/<%= cat.id %>">show</a>
 </li>
 <% end %>
 
