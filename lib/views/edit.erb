@@ -1,0 +1,19 @@
+<form method="POST" action="/big_cats/<%= @big_cat.id %>">
+  <label for="breed">Name: </label>
+  <input type="text" name="breed" id="breed" value="<%= @big_cat.breed %>"/>
+  <label for="average_age">Life Expectancy: </label>
+  <input type="number" name="average_age" id="average_age" value="<%= @big_cat.average_age %>"/>
+  <label for="length">Length: </label>
+  <input type="number" name="length" id="length" value="<%= @big_cat.length %>"/>
+  <label for="weight">Weight: </label>
+  <input type="number" name="weight" id="weight" value="<%= @big_cat.weight %>"/>
+  <input type="submit" value="Edit Big Cat">
+
+  <input type="hidden" name="_method" value="patch">
+</form>
+
+
+<form action="/big_cats/ <%= @big_cat.id %>" method="POST">
+  <input type="submit" value="Delete Big Cat">
+  <input type="hidden" name="_method" value="DELETE">
+</form>

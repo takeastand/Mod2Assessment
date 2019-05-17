@@ -1,0 +1,11 @@
+<h1>Welcome!</h1>
+
+<h2>List of Big Cats</h2>
+
+<% @big_cats.each do |cat| %>
+<li><%= "#{cat.breed} - #{cat.average_age} - #{cat.length} - #{cat.weight}" %>
+  <a href="big_cats/<%= cat.id %>/edit">edit</a>
+</li>
+<% end %>
+
+<a href="/new">Add New Cat</a>
